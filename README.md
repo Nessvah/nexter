@@ -1,1 +1,1 @@
-# summit-properties
+# nexter-properties
