@@ -1,3 +1,4 @@
 .footer {
-  background-color: pink;
+  background-color: var(--color-secondary);
+  grid-column: full-start / full-end;
 }

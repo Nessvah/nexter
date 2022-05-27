@@ -1,3 +1,7 @@
 .realtors {
-  background-color: gold;
+  background-color: var(--color-secondary);
+
+  // Full bleed
+  // At what col it starts and when it ends
+  grid-column: col-start 7 / full-end;
 }

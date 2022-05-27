@@ -1,3 +1,7 @@
 .header {
-  background-color: lightblue;
+  background-color: var(--color-grey-dark-1);
+  // Full-bleed look
+
+  // where to start in the begining, and what columnd does it ends (full start-col-end 6)
+  grid-column: full-start / col-end 6;
 }

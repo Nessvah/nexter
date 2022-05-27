@@ -2,8 +2,9 @@
 
 :root {
   // COLOR VARIABLES
-
+  --color-primary: #c69963;
   --color-primary-dark: #b28451;
+
   --color-secondary: #101d2c;
 
   --color-grey-light-1: #f9f7f6;
@@ -42,16 +43,22 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh min-content auto 40vw repeat(3, min-content); // layout responsive and adaptive right from the beginning
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content); // layout responsive and adaptive right from the beginning
   // start with a simple 8 col grid
   grid-template-columns:
-    [sidebar-start] 8rem [sidebar-end full-start] 1fr [center-start] repeat(
-      8,
-      [col-start] minmax(min-content, 14rem) [col-end]
-    )
-    [center-end] 1fr [sidebar-end];
+    [sidebar-start] 8rem [sidebar-end full-start] minmax(
+      6rem,
+      1fr
+    ) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(6rem, 1fr) [full-end];
   /* 8rem for the sidebar
   full width 1140/8 =  142.5px = 14.25rem (14rem)
-  1fr for the edges of the page (full-bleed sections
+  1fr for the edges of the page (full-bleed sections) with minmax property
+  So that the min is always 6 rem to have always a little margin when decreasing
   And then we name the columns)*/
+
+  & > * {
+    padding: 40px;
+    font-size: 3rem;
+  }
 }
