@@ -1,18 +1,20 @@
-// COLOR VARIABLES
-$color-primary: #c69963;
-$color-primary-dark: #b28451;
+// VARIABLES
 
-$color-secondary: #101d2c;
+:root {
+  // COLOR VARIABLES
 
-$color-grey-light-1: #f9f7f6;
-$color-grey-light-2: #aaa;
+  --color-primary-dark: #b28451;
+  --color-secondary: #101d2c;
 
-$color-grey-dark-1: #54483a;
-$color-grey-dark-2: #6d5d4b;
+  --color-grey-light-1: #f9f7f6;
+  --color-grey-light-2: #aaa;
+  --color-grey-dark-1: #54483a;
+  --color-grey-dark-2: #6d5d4b;
 
-// FONT VARIABLES
-$font-primary: "Nunito", sans-serif;
-$font-display: "Josefin Sans", sans-serif;
+  // FONT VARIABLES
+  --font-primary: "Nunito", sans-serif;
+  --font-display: "Josefin Sans", sans-serif;
+}
 
 // GLOBALS
 
@@ -30,8 +32,26 @@ html {
 }
 
 body {
-  font-family: $font-primary;
-  color: $color-grey-dark-2;
+  font-family: var(--font-primary);
+  color: var(--color-grey-dark-2);
   font-weight: 300;
   line-height: 1.6;
+}
+
+// MAIN CONTAINER
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content auto 40vw repeat(3, min-content); // layout responsive and adaptive right from the beginning
+  // start with a simple 8 col grid
+  grid-template-columns:
+    [sidebar-start] 8rem [sidebar-end full-start] 1fr [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] 1fr [sidebar-end];
+  /* 8rem for the sidebar
+  full width 1140/8 =  142.5px = 14.25rem (14rem)
+  1fr for the edges of the page (full-bleed sections
+  And then we name the columns)*/
 }
