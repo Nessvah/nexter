@@ -10,3 +10,14 @@
   ); //dont need to specify rows because they will be automatically created (implicit)
   gap: 6rem;
 }
+
+.feature {
+  &__icon {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  &__text {
+    font-size: 1.7rem;
+  }
+}

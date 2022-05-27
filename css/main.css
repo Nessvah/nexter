@@ -41,11 +41,19 @@ body {
   And then we name the columns)*/
 }
 
-.story__pictures {
-  background-color: lightsalmon;
+.heading-4, .heading-3, .heading-2, .heading-1 {
+  font-family: var(--font-display);
+  font-weight: 400;
 }
-.story__content {
-  background-color: aquamarine;
+
+.heading-4 {
+  font-size: 1.9rem;
+}
+.heading-4--light {
+  color: var(--color-grey-light-1);
+}
+.heading-4--dark {
+  color: var(--color-grey-dark-1);
 }
 
 .sidebar {
@@ -70,6 +78,14 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 6rem;
+}
+
+.feature__icon {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+.feature__text {
+  font-size: 1.7rem;
 }
 
 .story__pictures {
