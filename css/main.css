@@ -40,10 +40,6 @@ body {
   So that the min is always 6 rem to have always a little margin when decreasing
   And then we name the columns)*/
 }
-.container > * {
-  padding: 40px;
-  font-size: 3rem;
-}
 
 .story__pictures {
   background-color: lightsalmon;
@@ -69,8 +65,11 @@ body {
 }
 
 .features {
-  background-color: var(--color-grey-light-2);
   grid-column: center-start/center-end;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6rem;
 }
 
 .story__pictures {

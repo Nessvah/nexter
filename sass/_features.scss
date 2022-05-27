@@ -1,4 +1,12 @@
 .features {
-  background-color: var(--color-grey-light-2);
   grid-column: center-start / center-end;
+  margin: 15rem 0;
+
+  display: grid; //makes the grid item to be a grid container as well
+  // 2 by 3 grid
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); //dont need to specify rows because they will be automatically created (implicit)
+  gap: 6rem;
 }
