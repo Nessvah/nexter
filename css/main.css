@@ -76,13 +76,26 @@ body {
   grid-column: center-start/center-end;
   margin: 15rem 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /*grid-template-columns: repeat(
+    3,
+    1fr
+  ); dont need to specify rows because they will be automatically created (implicit)*/
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 6rem;
 }
 
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  row-gap: 1.5rem;
+  column-gap: 2.5rem;
+  align-items: start;
+}
 .feature__icon {
   width: 4.5rem;
   height: 4.5rem;
+  grid-row: 1/span 2;
+  transform: translateY(-1rem);
 }
 .feature__text {
   font-size: 1.7rem;

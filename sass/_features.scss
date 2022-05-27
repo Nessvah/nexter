@@ -4,17 +4,32 @@
 
   display: grid; //makes the grid item to be a grid container as well
   // 2 by 3 grid
-  grid-template-columns: repeat(
+  /*grid-template-columns: repeat(
     3,
     1fr
-  ); //dont need to specify rows because they will be automatically created (implicit)
+  ); dont need to specify rows because they will be automatically created (implicit)*/
+
+  //make it responsive without media query
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 6rem;
 }
 
 .feature {
+  // 2 by 2 grid
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  row-gap: 1.5rem;
+  column-gap: 2.5rem;
+  align-items: start;
+
   &__icon {
     width: 4.5rem;
     height: 4.5rem;
+    // grid-row: 1/ -1; (-1 means end of explicit grid so it doesnt applies to implicit grids)
+    grid-row: 1 / span 2;
+
+    //move the icon a bit to the top to center with text
+    transform: translateY(-1rem);
   }
 
   &__text {
