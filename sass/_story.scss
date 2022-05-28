@@ -2,6 +2,12 @@
   &__pictures {
     background-color: var(--color-primary);
     grid-column: full-start / col-end 4;
+
+    /* If we want to specify and control individual R, G and B values with rgba(),
+    you will need to specify a variable for each color component as a decimal 
+    value, and reference each variable within the rgba() function. */
+
+    //we can also use scss variables and it will work
     background-image: linear-gradient(rgba(#c69963, 0.5), rgba(#c69963, 0.5)),
       url(/img/back.jpg);
     display: grid;
