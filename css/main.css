@@ -2,6 +2,7 @@
   --color-primary: #c69963;
   --color-primary-dark: #b28451;
   --color-secondary: #101d2c;
+  --color-white: #fff;
   --color-grey-light-1: #f9f7f6;
   --color-grey-light-2: #aaa;
   --color-grey-dark-1: #54483a;
@@ -46,6 +47,24 @@ body {
   font-weight: 400;
 }
 
+.heading-2 {
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1;
+}
+.heading-2--light {
+  color: var(--color-grey-light-1);
+}
+.heading-2--dark {
+  color: var(--color-grey-dark-1);
+}
+
+.heading-3 {
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
 .heading-4 {
   font-size: 1.9rem;
 }
@@ -54,6 +73,38 @@ body {
 }
 .heading-4--dark {
   color: var(--color-grey-dark-1);
+}
+
+.mb-s {
+  margin-bottom: 2rem;
+}
+
+.mb-m {
+  margin-bottom: 3rem;
+}
+
+.mb-l {
+  margin-bottom: 4rem;
+}
+
+.mb-xl {
+  margin-bottom: 8rem;
+}
+
+.btn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 0;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.8rem 3rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn:hover {
+  background-color: var(--color-primary-dark);
 }
 
 .sidebar {
@@ -108,6 +159,21 @@ body {
 .story__content {
   background-color: var(--color-grey-light-1);
   grid-column: col-start 5/full-end;
+  padding: 6rem 8vw;
+  /* 
+  OPTION WITH FLEXBOX:
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; */
+  display: grid;
+  align-content: center;
+  justify-items: start;
+}
+.story__text {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 4rem;
 }
 
 .homes {
