@@ -161,8 +161,29 @@ body {
   height: 3rem;
   justify-self: center;
 }
+.header__seeon-text {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  column-gap: 1.5rem;
+  align-items: center;
+  font-size: 1.6rem;
+  color: var(--color-grey-light-2);
+}
+.header__seeon-text::before, .header__seeon-text::after {
+  content: "";
+  height: 1px;
+  display: block;
+  background-color: currentColor;
+}
+.header__seenon-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 3rem;
+  justify-items: center;
+}
 .header__seenon-logos img {
   height: 2.5rem;
+  opacity: 0.6;
 }
 .header__btn {
   align-self: start;
