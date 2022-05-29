@@ -247,9 +247,16 @@ body {
 .home__location, .home__rooms {
   margin-top: 2.5rem;
 }
+.home__location, .home__rooms, .home__area, .home__price {
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 .home__location img, .home__rooms img, .home__area img, .home__price img {
-  height: 2rem;
-  width: 2rem;
+  height: 3rem;
+  width: 3rem;
 }
 .home__btn {
   grid-column: 1/-1;
