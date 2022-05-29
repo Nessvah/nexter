@@ -28,6 +28,10 @@
     z-index: 10;
     justify-self: end;
     margin: 1rem;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__heading {
