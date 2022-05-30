@@ -4,8 +4,8 @@
   "description": "landing page for a fictional company who sells luxury home accross the world",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "sass --watch sass:css",
-    "compile:sass": "sass sass:css"
+    "watch:sass": "sass sass:css -w --style compressed",
+    "prefix": "postcss css/main.css --use autoprefixer -d css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   ],
   "author": "Silvia Vanessa (Nessvah)",
   "license": "MIT",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/Nessvah/nexter/issues"
   },
