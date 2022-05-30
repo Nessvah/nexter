@@ -1,3 +1,5 @@
+@use "base" as *;
+
 .story {
   &__pictures {
     background-color: var(--color-primary);
@@ -10,10 +12,16 @@
     //we can also use scss variables and it will work
     background-image: linear-gradient(rgba(#c69963, 0.5), rgba(#c69963, 0.5)),
       url(/img/back.jpg);
+    background-size: cover;
     display: grid;
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(6, 1fr);
     align-items: center; // center the imgs in the grid area
+
+    @media only screen and (max-width: $breakpoint-m) {
+      grid-column: 1 / -1;
+      padding: 3rem;
+    }
   }
 
   &__img {
@@ -24,6 +32,11 @@
       grid-row: 2 / 6;
       grid-column: 2 / 6;
       box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+
+      @media only screen and (max-width: $breakpoint-m) {
+        grid-column: 1 / 5;
+        grid-row: 1 / -1;
+      }
     }
 
     &--2 {
@@ -32,6 +45,11 @@
       width: 115%; //so that the img overlaps the container
       z-index: 50;
       box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3);
+
+      @media only screen and (max-width: $breakpoint-m) {
+        grid-row: 1 / -1;
+        width: 100%;
+      }
     }
   }
 
@@ -52,6 +70,11 @@
     display: grid;
     align-content: center;
     justify-items: start;
+
+    @media only screen and (max-width: $breakpoint-m) {
+      grid-column: 1 / -1;
+      grid-row: 5 / 6;
+    }
   }
 
   &__text {

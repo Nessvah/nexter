@@ -1,3 +1,5 @@
+@use "base" as *;
+
 .header {
   background-color: var(--color-grey-dark-1);
   // Full-bleed look
@@ -15,6 +17,14 @@
   padding: 8rem;
   padding-top: 4rem;
   justify-content: center;
+
+  @media only screen and (max-width: $breakpoint-m) {
+    grid-column: 1 / -1;
+  }
+
+  @media only screen and (max-width: $breakpoint-s) {
+    padding: 5rem;
+  }
 
   &__logo {
     height: 3rem;

@@ -1,3 +1,5 @@
+@use "base" as *;
+
 .realtors {
   background-color: var(--color-secondary);
 
@@ -10,8 +12,12 @@
   display: grid;
   justify-content: center;
   align-content: center;
-  row-gap: 2rem;
+  row-gap: 2.5rem;
   justify-items: center;
+
+  @media only screen and (max-width: $breakpoint-m) {
+    grid-column: 1 / -1;
+  }
 
   &__list {
     display: grid;
@@ -19,6 +25,14 @@
     column-gap: 2rem;
     row-gap: 5vh;
     align-items: center;
+
+    @media only screen and (max-width: $breakpoint-m) {
+      grid-template-columns: repeat(3, min-content max-content);
+    }
+
+    @media only screen and (max-width: $breakpoint-m) {
+      grid-template-columns: min-content max-content;
+    }
   }
 
   &__img {
