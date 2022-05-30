@@ -18,6 +18,12 @@
   --font-display: "Josefin Sans", sans-serif;
 }
 
+//////////////////////////////////////
+// MEDIA QUERIES
+
+$breakpoint-xl: 75em; //1200px
+$breakpoint-l: 62.5em; //900px
+
 // GLOBALS
 
 *,
@@ -31,6 +37,10 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 10px/16 = 62.5 --- 1rem = 10px
+
+  @media only screen and (max-width: $breakpoint-xl) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -55,4 +65,14 @@ body {
   1fr for the edges of the page (full-bleed sections) with minmax property
   So that the min is always 6 rem to have always a little margin when decreasing
   And then we name the columns)*/
+
+  @media only screen and (max-width: $breakpoint-l) {
+    //changing sidebar to top - add one more row and change the columns
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr)
+      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end] minmax(6rem, 1fr) [full-end];
+  }
 }
